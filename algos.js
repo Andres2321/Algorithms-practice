@@ -9,16 +9,23 @@
 // use recursion to add index ascending through array
 // add each result to new array pointer
 
-
 const runningSum = (nums) => {
   for (let i = 1; i < nums.length; i++) {
     nums[i] += nums[i - 1];
   }
   return nums;
 };
-
 console.log(runningSum([5, 2, 3, 4, 5]));
 
-const array = [1, 2, 3, 4, 5]
+const runningSum = (nums) => {
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] == 0) {
+      return
+    } else {
+      nums[i] += nums[i - 1]
+    }
+  }
+  return nums;
+};
+console.log(runningSum([5, 2, 3, 4, 5]));
 
-console.log(array[1])
