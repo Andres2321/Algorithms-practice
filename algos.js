@@ -75,4 +75,4 @@ const smallerNumbersThanCurrent = (nums) => {
   return newArray
   }
 
-console.log(smallerNumbersThanCurrent([8, 1, 2, 2, 3]));
+// console.log(smallerNumbersThanCurrent([8, 1, 2, 2, 3]));
