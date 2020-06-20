@@ -60,19 +60,30 @@ const shuffle = (nums, n) => {
 // ----- pseudocode -----
 // Iterate through array 
 
-const smallerNumbersThanCurrent = (nums) => {
-  let newArray = [];
+// const smallerNumbersThanCurrent = (nums) => {
+//   let newArray = [];
 
-  for (let i = 0; i < nums.length; i++) {
-    let count = 0
-    for (let j = 0; j < nums.length; j++) {
-      if (nums[i] > nums[j]) {
-        count++
-      }
-    }
-    newArray[i]= count
-  }
-  return newArray
-  }
+//   for (let i = 0; i < nums.length; i++) {
+//     let count = 0
+//     for (let j = 0; j < nums.length; j++) {
+//       if (nums[i] > nums[j]) {
+//         count++
+//       }
+//     }
+//     newArray[i]= count
+//   }
+//   return newArray
+//   }
 
 // console.log(smallerNumbersThanCurrent([8, 1, 2, 2, 3]));
+
+var smallerNumbersThanCurrent = function (nums) {
+  const sortedNums = [...nums].sort((a, b) => a - b);
+console.log(sortedNums)
+  for (let i = 0; i < nums.length; i++){
+    nums[i] = sortedNums.indexOf(nums[i])
+  };
+  return nums;
+};
+
+console.log(smallerNumbersThanCurrent([8, 1, 2, 2, 3]));
