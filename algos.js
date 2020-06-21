@@ -130,12 +130,16 @@
 const decompressRLElist = (nums) => {
   const res = [];
   for (let i = 0; i < nums.length; i += 2) {
-    const size = nums[i];
-    const val = nums[i + 1];
-    const arr = new Array(size).fill(val);
-    res.push(...arr);
-  }
+    const size = nums[i];                     //contain 1 and 3 which will be the frequency
+    const val = nums[i + 1];                  //contains 2 and 4, which will be the value 
+    const arr = new Array(size).fill(val);    //creates a new array where size is the length.
+    res.push(...arr);                         //.fill will populate everything within the constructor to the allowed length
+  }                                           
   return res;
 };
 
-console.log(decompressRLElist([1, 2, 3, 4]));
+// console.log(decompressRLElist([1, 2, 3, 4]));
+
+
+// ===== Algo #6 =====
+
