@@ -130,16 +130,28 @@
 const decompressRLElist = (nums) => {
   const res = [];
   for (let i = 0; i < nums.length; i += 2) {
-    const size = nums[i];                     //contain 1 and 3 which will be the frequency
-    const val = nums[i + 1];                  //contains 2 and 4, which will be the value 
-    const arr = new Array(size).fill(val);    //creates a new array where size is the length.
-    res.push(...arr);                         //.fill will populate everything within the constructor to the allowed length
-  }                                           
+    const size = nums[i]; //contain 1 and 3 which will be the frequency
+    const val = nums[i + 1]; //contains 2 and 4, which will be the value
+    const arr = new Array(size).fill(val); //creates a new array where size is the length.
+    res.push(...arr); //.fill will populate everything within the constructor to the allowed length
+  }
   return res;
 };
 
 // console.log(decompressRLElist([1, 2, 3, 4]));
 
-
 // ===== Algo #6 =====
+// There is a robot starting at position (0, 0), the origin, on a 2D plane. Given a sequence of its moves, judge if this robot ends up at (0, 0) after it completes its moves.
+// The move sequence is represented by a string, and the character moves[i] represents its ith move.Valid moves are R(right), L(left), U(up), and D(down).
+// If the robot returns to the origin after it finishes all of its moves, return true.Otherwise, return false.
+// Note: The way that the robot is "facing" is irrelevant. "R" will always make the robot move to the right once, "L" will always make it move left, etc.
+// Also, assume that the magnitude of the robot's movement is the same for each move.
 
+const judgeCircle = (moves) => {
+  const splitMoves = moves.toUpperCase().split("");
+  for (let i = 0; i < splitMoves.length; i++) {
+  }
+
+};
+
+console.log(judgeCircle("ud"));
