@@ -157,7 +157,7 @@ const judgeCircle = (moves) => {
 console.log(judgeCircle("ud"));
 
 
-// ===== Algo #6 =====
+// ===== Algo #7 =====
 // Given an array nums of integers, return how many of them contain an even number of digits.
 
 
@@ -165,4 +165,3 @@ const findNumbers = () => {
 
 }
 
-console.log(findNumbers([12, 345, 2, 6, 7896]));
